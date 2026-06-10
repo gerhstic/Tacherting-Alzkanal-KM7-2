@@ -16,18 +16,19 @@
   <p class="small" id="updated">Letztes Update: --</p>
 
   <script>
-    async function loadData() {
-      const r = await fetch("data.json?nocache=" + Date.now());
-      const d = await r.json();
+  async function loadData() {
+    const response = await fetch("data.json?nocache=" + Date.now());
+    const data = await response.json();
 
-      document.getElementById("temp").textContent =
-        Number(d.temperature).toFixed(1) + " °C";
+    document.getElementById("temp").textContent =
+      Number(data.temperature).toFixed(1) + " °C";
 
-      document.getElementById("updated").textContent =
-        "Letztes Update: " + new Date(d.updated).toLocaleString("de-DE");
-    }
+    document.getElementById("updated").textContent =
+      "Letztes Update: " + new Date(data.updated).toLocaleString("de-DE");
+  }
 
-    loadData();
-  </script>
+loadData();
+setInterval(loadData, 60000);
+</script>
 </body>
 </html>
