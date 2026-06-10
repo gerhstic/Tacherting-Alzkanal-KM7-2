@@ -17,18 +17,24 @@
 
   <script>
   async function loadData() {
-    const response = await fetch("data.json?nocache=" + Date.now());
+    const response = await fetch(
+      "data.json?nocache=" + Date.now(),
+      { cache: "no-store" }
+    );
+
     const data = await response.json();
 
     document.getElementById("temp").textContent =
       Number(data.temperature).toFixed(2) + " °C";
 
     document.getElementById("updated").textContent =
-      "Letztes Update: " + new Date(data.updated).toLocaleString("de-DE");
+      "Messung: " +
+      new Date(data.updated).toLocaleTimeString("de-DE") +
+      " | geladen: " +
+      new Date().toLocaleTimeString("de-DE");
   }
 
-loadData();
-setInterval(loadData, 5000);
-</script>
+  loadData();
+  setInterval(loadData, 5000);</script>
 </body>
 </html>
