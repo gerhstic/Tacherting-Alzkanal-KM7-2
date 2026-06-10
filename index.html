@@ -12,7 +12,7 @@
 </head>
 <body>
   <h1>Aktuelle Wassertemperatur</h1>
-  <div class="temp" id="temp">--.- °C</div>
+  <div class="temp" id="temp">--.-- °C</div>
   <p class="small" id="updated">Letztes Update: --</p>
 
   <script>
@@ -21,7 +21,7 @@
     const data = await response.json();
 
     document.getElementById("temp").textContent =
-      Number(data.temperature).toFixed(1) + " °C";
+      Number(data.temperature).toFixed(2) + " °C";
 
     document.getElementById("updated").textContent =
       "Letztes Update: " + new Date(data.updated).toLocaleString("de-DE");
