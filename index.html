@@ -18,10 +18,9 @@
   <script>
   async function loadData() {
     const response = await fetch(
-      "data.json?nocache=" + Date.now(),
+      "https://raw.githubusercontent.com/gerhstic/Tacherting-Alzkanal-KM7-2/main/data.json?nocache=" + Date.now(),
       { cache: "no-store" }
     );
-
     const data = await response.json();
 
     document.getElementById("temp").textContent =
