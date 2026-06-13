@@ -31,16 +31,16 @@
       Number(data.temperature).toFixed(2) + " °C";
 
     document.getElementById("vbat").textContent =
-      Number(data.vbat).toFixed(2) + " V";
+      "VBat:" + Number(data.vbat).toFixed(2) + " V";
     
     document.getElementById("etemp").textContent =
-      Number(data.etemp).toFixed(2) + " °C";
+      "BoxTemp: " + Number(data.etemp).toFixed(2) + " °C";
     
     document.getElementById("rssi").textContent =
-      Number(data.rssi).toFixed(2) + " dBm";
+      "RSSI: " + Number(data.rssi).toFixed(2) + " dBm";
     
     document.getElementById("txpwr").textContent =
-      Number(data.txpwr).toFixed(2) + " dBm";
+      "TxPwr: " + Number(data.txpwr).toFixed(2) + " dBm";
     
     document.getElementById("updated").textContent =
       "Messung: " +
