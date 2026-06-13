@@ -6,8 +6,8 @@
   <title>Wassertemperatur Alzkanal</title>
   <style>
     body { font-family: system-ui, sans-serif; margin: 2rem; text-align: center; }
-    .bigFont { font-size: 3rem; font-weight: 700; }
-    .smallFont { color: #666; }
+    .bigFont { font-size: 3rem; font-weight: 700; margin-bottom: 1rem;}
+    .smallFont { color: #666; margin: 0.5rem 0;}
   </style>
 </head>
 <body>
@@ -31,7 +31,7 @@
       Number(data.temperature).toFixed(2) + " °C";
 
     document.getElementById("vbat").textContent =
-      "VBat:" + Number(data.vbat).toFixed(2) + " V";
+      "VBat: " + Number(data.vbat).toFixed(2) + " V";
     
     document.getElementById("etemp").textContent =
       "BoxTemp: " + Number(data.etemp).toFixed(2) + " °C";
