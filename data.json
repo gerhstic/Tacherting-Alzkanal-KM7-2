@@ -1,10 +1,4 @@
 {
-  "temperature": 14.50,
-  "msgNr": 0,
-  "vbat": 3.3,
-  "etemp": 20.0,
-  "dst": 900,
-  "rssi": -90.0,
-  "txpwr": 0,
-  "updated": "2026-06-13T11:41:15.218Z"
+  "temperature": 15.13,
+  "updated": "2026-06-13T11:56:15.201Z"
 }
