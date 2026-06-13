@@ -6,14 +6,18 @@
   <title>Wassertemperatur Alzkanal</title>
   <style>
     body { font-family: system-ui, sans-serif; margin: 2rem; text-align: center; }
-    .temp { font-size: 3rem; font-weight: 700; }
-    .small { color: #666; }
+    .bigFont { font-size: 3rem; font-weight: 700; }
+    .smallFont { color: #666; }
   </style>
 </head>
 <body>
   <h2>Aktuelle Wassertemperatur</h2>
-  <div class="temp" id="temp">--.-- °C</div>
-  <p class="small" id="updated">Letztes Update: --</p>
+  <div class="bigFont" id="temp">--.-- °C</div>
+  <p class="smallFont" id="vbat">VBat: -.-- V</p>
+  <p class="smallFont" id="etemp">BoxTemp: --.-- °C</p>
+  <p class="smallFont" id="rssi">RSSI: ---.- dBm</p>
+  <p class="smallFont" id="txpwr">TxPwr: ---.-- dBm</p>
+  <p class="smallFont" id="updated">Letztes Update: --</p>
 
   <script>
   async function loadData() {
@@ -26,6 +30,18 @@
     document.getElementById("temp").textContent =
       Number(data.temperature).toFixed(2) + " °C";
 
+    document.getElementById("vbat").textContent =
+      Number(data.vbat).toFixed(2) + " V";
+    
+    document.getElementById("etemp").textContent =
+      Number(data.etemp).toFixed(2) + " °C";
+    
+    document.getElementById("rssi").textContent =
+      Number(data.rssi).toFixed(2) + " dBm";
+    
+    document.getElementById("txpwr").textContent =
+      Number(data.txpwr).toFixed(2) + " dBm";
+    
     document.getElementById("updated").textContent =
       "Messung: " +
       new Date(data.updated).toLocaleTimeString("de-DE") +
