@@ -1,8 +1,8 @@
 {
-  "temperature": 21.06,
-  "vbat": 3.97,
+  "temperature": 21,
+  "vbat": 3.99,
   "etemp": 16,
-  "rssi": -80,
-  "txpwr": 14,
-  "updated": "2026-07-23T19:52:51.521Z"
+  "rssi": -90,
+  "txpwr": -1,
+  "updated": "2026-07-23T20:07:49.752Z"
 }
