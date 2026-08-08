@@ -2,7 +2,7 @@
   "temperature": 23.56,
   "vbat": 3.95,
   "etemp": 15,
-  "rssi": -60,
-  "txpwr": 4,
-  "updated": "2026-08-08T04:31:18.833Z"
+  "rssi": -64,
+  "txpwr": -1,
+  "updated": "2026-08-08T04:46:17.174Z"
 }
